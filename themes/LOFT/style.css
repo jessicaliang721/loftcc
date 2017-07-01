@@ -1,0 +1,100 @@
+/*
+ Theme Name:   LOFT Theme
+ Theme URI:    
+ Description:  Child theme based on Twenty Seventeen
+ Author:       Jessica Pei
+ Author URI:   http://jessicapei.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ Tags:         black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, responsive-layout, infinite-scroll, post-slider, design, food, journal, magazine, news, photography, portfolio, clean, contemporary, dark, elegant, modern, professional, sophisticated
+ Text Domain:  twenty-seventeen-child
+ */
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    color: #E84C3D;
+}
+.has-header-image.twentyseventeen-front-page .site-branding, .has-header-video.twentyseventeen-front-page .site-branding, .has-header-image.home.blog .site-branding, .has-header-video.home.blog .site-branding {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    bottom: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.main-navigation .custom-logo-link {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+#top-menu {
+	padding-top: 15px;
+}
+
+.js .menu-toggle {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.menu-top-menu-container {
+   margin-top: 22px;
+}
+
+.single-featured-image-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+@media screen and (min-width: 48em) {
+
+    .site-title {
+        font-size: 4.5em;
+    }
+
+    .site-description {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .blog:not(.has-sidebar) #primary article, .archive:not(.page-one-column):not(.has-sidebar) #primary article, .search:not(.has-sidebar) #primary article, .error404:not(.has-sidebar) #primary .page-content, .error404.has-sidebar #primary .page-content, body.page-two-column:not(.archive) #primary .entry-content, body.page-two-column #comments,
+    body:not(.has-sidebar):not(.page-one-column) .page-header, body.has-sidebar.error404 #primary .page-header, body.page-two-column:not(.archive) #primary .entry-header, body.page-two-column.archive:not(.has-sidebar) #primary .page-header,
+    .page-two-column .panel-content .recent-posts {
+     float: none;
+     width: 100%;
+ }
+
+ /*Home Page Blog Section*/
+ .twentyseventeen-front-page .panel-content .recent-posts article {
+     width: 32%;
+     float: left;
+ }
+ .twentyseventeen-front-page .recent-posts article:first-child {
+     margin-right: .5em;
+ }
+ .twentyseventeen-front-page .recent-posts article:last-child {
+     margin-left: .5em;
+ }
+
+ .site-header .navigation-top .menu-scroll-down {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.js .menu-toggle, .js .dropdown-toggle {
+    display: none;
+}
+
+.menu-top-menu-container {
+   margin-top: 0; 
+}
+}

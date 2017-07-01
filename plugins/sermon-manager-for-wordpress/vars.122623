@@ -1,0 +1,6 @@
+HOSTNAME=6ad182a87754
+HOME=/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WORKING_DIR=/buddy/sermon-manager
+PWD=/buddy/sermon-manager
+SKIP_BUDDY_ECHO=1
