@@ -19,12 +19,14 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
-			the_content();
+		the_content();
+		
+		get_template_part( 'template-parts/flexible-content.php' );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'  => '</div>',
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+			'after'  => '</div>',
 			) );
-		?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+			?>
+		</div><!-- .entry-content -->
+	</article><!-- #post-## -->

@@ -25,15 +25,16 @@
 	</div><!-- .entry-meta -->
 <?php endif; ?>
 
-<?php if ( is_front_page() && ! is_home() ) {
-
-	if ( '' !== get_the_post_thumbnail() ) : ?>
+<?php if ( '' !== get_the_post_thumbnail() ) { ?>
 	<div class="post-thumbnail">
 		<a href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
 		</a>
 	</div><!-- .post-thumbnail -->
-	<?php endif;
+<?php } ?>
+
+<?php if ( is_front_page() && ! is_home() ) { ?>
+	<?php
 
 			// The excerpt is being displayed within a front page section, so it's a lower hierarchy than h2.
 	the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
