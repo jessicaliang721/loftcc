@@ -2,10 +2,10 @@
  Theme Name:   LOFT Theme
  Theme URI:    
  Description:  Child theme based on Twenty Seventeen
- Author:       Jessica Pei
- Author URI:   http://jessicapei.com
+ Author:       Jessica Liang
+ Author URI:   http://jessicaliang.net
  Template:     twentyseventeen
- Version:      1.0.0
+ Version:      1.0.1
  Tags:         black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, responsive-layout, infinite-scroll, post-slider, design, food, journal, magazine, news, photography, portfolio, clean, contemporary, dark, elegant, modern, professional, sophisticated
  Text Domain:  twenty-seventeen-child
  */
@@ -19,7 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h2, h3, h4 {
     font-weight: bold;
-    color: #E84C3D;
+    color: #E54C26;
+}
+
+/* this is to make the home page parallax images show up on Chrome: */
+.twentyseventeen-panel {
+    position: static;
 }
 
 /* One Column */
@@ -50,7 +55,7 @@ h2, h3, h4 {
 }
 
 #top-menu {
-	padding-top: 15px;
+    padding-top: 15px;
 }
 
 .js .menu-toggle {
@@ -76,19 +81,19 @@ h2, h3, h4 {
 
 /* Link Styles */
 a {
-    color: #E84C3D;
+    color: #E54C26;
     text-decoration: underline;
     box-shadow: none !important;
 }
 
 a:hover {
     font-weight: bold;
-    color: #E84C3D;
+    color: #E54C26;
     box-shadow: none !important;
 }
 
 .button {
-    background-color: #E84C3D;
+    background-color: #E54C26;
     color: #fff !important;
     box-shadow: none !important;
     font-weight: bold;
@@ -137,6 +142,16 @@ a:hover {
 /* Sermon Manager */
 #wpfc_sermon_sorting select {
     margin-bottom: .5em;
+}
+
+/* Accordion */
+.accordion-title {
+    color: #E54C26;
+    font-size: 1rem;
+}
+
+.accordion-title:visited {
+    color: #E54C26;
 }
 
 @media screen and (min-width: 30em) {
@@ -211,7 +226,7 @@ a:hover {
 
     /* Sermon Manager */
     #wpfc_sermon_sorting select {
-        width: 24%;
+        /*width: 24%; COMMENTED OUT BY JLP ON 1/30/18 */
         float: left;
         margin-right: 1%;
         margin-bottom: 2em;

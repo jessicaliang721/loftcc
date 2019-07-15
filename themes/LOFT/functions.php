@@ -1,7 +1,11 @@
 <?php 
 function enqueue_scripts_styles() {
+	/* Add Foundation CSS */
     wp_enqueue_style( 'foundation', get_stylesheet_directory_uri().'/assets/css/foundation.min.css' );
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+
+    /* Add Foundation JS */
+    wp_deregister_script( 'jquery' );
     wp_enqueue_script('jquery', get_stylesheet_directory_uri() . '/assets/js/vendor/jquery.js', '','', true);
     wp_enqueue_script('what-input', get_stylesheet_directory_uri() . '/assets/js/vendor/what-input.js', array('jquery'),'', true);
     wp_enqueue_script('foundation', get_stylesheet_directory_uri() . '/assets/js/vendor/foundation.js', array('jquery'),'', true);
@@ -322,6 +326,113 @@ acf_add_local_field_group(array (
 								'id' => '',
 							),
 							'default_value' => '',
+						),
+					),
+					'min' => '',
+					'max' => '',
+				),
+				'5d2be15dd225c' => array(
+					'key' => '5d2be15dd225c',
+					'name' => 'accordion',
+					'label' => 'Accordion',
+					'display' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5d2be23f4bbf1',
+							'label' => 'Section Title',
+							'name' => 'section_title',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
+							'key' => 'field_5d2be24decf6d',
+							'label' => 'Section Description',
+							'name' => 'section_description',
+							'type' => 'textarea',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'maxlength' => '',
+							'rows' => '',
+							'new_lines' => '',
+						),
+						array(
+							'key' => 'field_5d2be257ecf6e',
+							'label' => 'Panel Repeater',
+							'name' => 'panel_repeater',
+							'type' => 'repeater',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'collapsed' => '',
+							'min' => 0,
+							'max' => 0,
+							'layout' => 'table',
+							'button_label' => '',
+							'sub_fields' => array(
+								array(
+									'key' => 'field_5d2be29decf6f',
+									'label' => 'Panel Title',
+									'name' => 'panel_title',
+									'type' => 'text',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'prepend' => '',
+									'append' => '',
+									'maxlength' => '',
+								),
+								array(
+									'key' => 'field_5d2be2a3ecf70',
+									'label' => 'Panel Body',
+									'name' => 'panel_body',
+									'type' => 'textarea',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'maxlength' => '',
+									'rows' => '',
+									'new_lines' => '',
+								),
+							),
 						),
 					),
 					'min' => '',

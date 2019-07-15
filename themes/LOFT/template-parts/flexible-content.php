@@ -16,6 +16,12 @@ if( have_rows('page_layout_options') ):
 			} ?>
 		<div class="module two-columns-half" <?php echo $style?>>
 			<div class="wrap">
+				<?php if( get_sub_field('section_title') ): ?>
+					<h2 class="text-center"><?php the_sub_field('section_title'); ?></h2>
+				<?php endif; ?>
+				<?php if( get_sub_field('description') ): ?>
+					<?php the_sub_field('description'); ?>
+				<?php endif; ?>
 				<div class="grid-x grid-margin-x">
 					<div class="large-6 cell"><?php the_sub_field('column_1'); ?></div>
 					<div class="large-6 cell"><?php the_sub_field('column_2'); ?></div>
@@ -130,7 +136,7 @@ if( have_rows('page_layout_options') ):
 		// Accordion
 		elseif( get_row_layout() == 'accordion' ): ?>
 		<div class="module">
-			<div class="wrap module">
+			<div class="wrap">
 				<?php if( get_sub_field('section_title') ): ?>
 					<h2 class="text-center"><?php the_sub_field('section_title'); ?></h2>
 				<?php endif; ?>
@@ -139,18 +145,20 @@ if( have_rows('page_layout_options') ):
 				<?php endif; ?>
 
 				<?php if( have_rows('panel_repeater') ): ?>
-					<ul class="accordion" data-accordion data-multi-expand="true">
+					<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 						<?php while ( have_rows('panel_repeater') ) : the_row();
 							$panel_title = get_sub_field('panel_title');
 							$panel_body = get_sub_field('panel_body');
 						?>
-						<li class="accordion-item" data-accordion-item>
+						<li class="accordion-item"  data-accordion-item>
 							<a href="#" class="accordion-title"><?php echo $panel_title?></a>
 							<div class="accordion-content" data-tab-content>
 						      <?php echo $panel_body?>
 						    </div>
 						</li>
-						<?php endwhile ?>
+						<?php
+							endwhile;
+						?>
 					</ul>
 				<?php endif; ?>
 			</div>
